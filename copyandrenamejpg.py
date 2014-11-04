@@ -1,12 +1,11 @@
 import os
 import shutil
-import random
 
-topdir = '' # directory with all pictures in directory or subdirectory
+topdir = '' # source directory with all pictures in specific directory or subdirectory
 dest   = '' # destination of data to be copied
 
-exten = '.jpg'
-count = 0
+exten = '.jpg' #change for different file type to be copied
+count = 0      #global counter for renaming
 
 def incrament():
 	global count
@@ -19,11 +18,11 @@ def step(ext, dirname, names):
 			incrament()
 			a = os.path.join(dirname, name)
 			b = name
-			c = a.replace(b,str(count)+'.JPG')
-			print(b)
+			c = a.replace(b,str(count)+exten)
 			os.rename(a,c)
 			shutil.copy2(c,dest)
 
 print('start')
 os.path.walk(topdir, step, exten)
+print('Copied ', count, 'files with the final file named: ' str(count)+exten)
 print('end')
