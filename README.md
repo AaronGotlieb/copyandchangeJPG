@@ -1,4 +1,4 @@
-Recently, Amazon released that prime members would be allowed up backup 
+    Recently, Amazon released that prime members would be allowed up backup 
 unlimited photo's to their cloud network. This tool is so iPhoto users 
 can consolidate all photos from iPhoto into a singular directory to be 
 copied to Amazon cloud. The tool searches for .jpg images and then 
