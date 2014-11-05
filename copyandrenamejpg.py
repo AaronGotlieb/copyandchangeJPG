@@ -19,7 +19,7 @@ def step(ext, dirname, names):
 			a = os.path.join(dirname, name)
 			b = name
 			print(b)
-			c = a.replace(b,str(count)+'.JPG') #also change file type here here
+			c = a.replace(b,str(count)+'.JPG') #also change file type here here 
 			os.rename(a,c)
 			shutil.copy2(c,dest)
 
